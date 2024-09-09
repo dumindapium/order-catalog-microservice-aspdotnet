@@ -1,0 +1,36 @@
+services:
+  orderservice:
+    image: ${DOCKER_REGISTRY-}orderservice
+    build:
+      context: .
+      dockerfile: OrderService/Dockerfile
+    ports:
+        - "5100:5100"
+        - "5101:5101"
+    networks:
+        - proxybackend
+
+  catalogservice:
+    image: ${DOCKER_REGISTRY-}catalogservice
+    build:
+      context: .
+      dockerfile: CatalogService/Dockerfile
+    ports:
+        - "5200:5200"
+        - "5201:5201"
+    networks:
+        - proxybackend
+
+  gateway:
+    image: ${DOCKER_REGISTRY-}gateway
+    build:
+      context: .
+      dockerfile: Gateway/Dockerfile
+    networks:
+        - proxybackend
+
+
+networks:
+   proxybackend:
+    name: proxybackend
+    driver: bridge
