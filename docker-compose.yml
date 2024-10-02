@@ -1,6 +1,6 @@
 services:
   orderservice:
-    image: ${DOCKER_REGISTRY-}orderservice
+    image: ${DOCKER_REGISTRY-}orderservice:latest
     build:
       context: .
       dockerfile: OrderService/Dockerfile
@@ -11,7 +11,7 @@ services:
         - proxybackend
 
   catalogservice:
-    image: ${DOCKER_REGISTRY-}catalogservice
+    image: ${DOCKER_REGISTRY-}catalogservice:latest
     build:
       context: .
       dockerfile: CatalogService/Dockerfile
@@ -22,7 +22,7 @@ services:
         - proxybackend
 
   gateway:
-    image: ${DOCKER_REGISTRY-}gateway
+    image: ${DOCKER_REGISTRY-}gateway:latest
     build:
       context: .
       dockerfile: Gateway/Dockerfile

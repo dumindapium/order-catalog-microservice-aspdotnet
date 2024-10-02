@@ -6,6 +6,7 @@ USER app
 WORKDIR /app
 EXPOSE 5100
 EXPOSE 5101
+ENV ASPNETCORE_URLS=http://+:5100;https://+:5101
 
 
 # This stage is used to build the service project
