@@ -13,7 +13,11 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService", "CatalogService\CatalogService.csproj", "{7D55A114-E96A-475B-9AF9-2A5AA07D4398}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway", "Gateway\Gateway.csproj", "{52E9980B-49E6-42B5-83DC-842FF713B89D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gateway", "Gateway\Gateway.csproj", "{52E9980B-49E6-42B5-83DC-842FF713B89D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{CA59A1D6-DD8C-4AD1-813D-857EE00E073F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "..\Common\Common.csproj", "{84A0FB6D-045C-486E-8371-C97E59429067}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +41,10 @@ Global
 		{52E9980B-49E6-42B5-83DC-842FF713B89D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52E9980B-49E6-42B5-83DC-842FF713B89D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52E9980B-49E6-42B5-83DC-842FF713B89D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84A0FB6D-045C-486E-8371-C97E59429067}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84A0FB6D-045C-486E-8371-C97E59429067}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84A0FB6D-045C-486E-8371-C97E59429067}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84A0FB6D-045C-486E-8371-C97E59429067}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +53,7 @@ Global
 		{63BFBF9F-1B67-4F4C-A635-9DDD72A14535} = {9888B45F-559E-408E-9939-065701EBD572}
 		{7D55A114-E96A-475B-9AF9-2A5AA07D4398} = {9888B45F-559E-408E-9939-065701EBD572}
 		{52E9980B-49E6-42B5-83DC-842FF713B89D} = {29281722-9AC1-4495-9498-BE94D180D98B}
+		{84A0FB6D-045C-486E-8371-C97E59429067} = {CA59A1D6-DD8C-4AD1-813D-857EE00E073F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3A517D7E-E883-4EC0-9BA1-82DCA2772D7C}

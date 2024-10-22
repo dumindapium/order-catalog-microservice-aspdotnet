@@ -15,7 +15,7 @@ public static class CreateOrder
         string CustomerCity,
         IEnumerable<Line> Lines
         ):IRequest<Guid>;
-    public record Line(int SeqNo, int ProductId, decimal Price);
+    public record Line(int SeqNo, Guid ItemId, decimal Price);
 
 
     public class Handler(OrderDbContext _dbContext) : IRequestHandler<Command, Guid>
@@ -32,7 +32,7 @@ public static class CreateOrder
                 CustomerName = request.CustomerName,
                 CustomerAddress = request.CustomerAddress,
                 CustomerCity = request.CustomerCity,
-                OrderLines = request.Lines.Select(l => new OrderLine() { Price = l.Price, ProductId = l.ProductId, SeqNo = l.SeqNo }).ToList()
+                OrderLines = request.Lines.Select(l => new OrderLine() { Price = l.Price, ItemId = l.ItemId, SeqNo = l.SeqNo }).ToList()
             };
 
             _dbContext.Set<Entities.Order>().Add(order);

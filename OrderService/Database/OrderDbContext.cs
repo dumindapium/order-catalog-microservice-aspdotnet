@@ -11,5 +11,5 @@ public class OrderDbContext : DbContext
 
     public DbSet<Order> Orders { get; set; }
     public DbSet<OrderLine> OrderLines { get; set; }
-    public DbSet<Product> Products { get; set; }
+    public DbSet<Item> Items { get; set; }
 }

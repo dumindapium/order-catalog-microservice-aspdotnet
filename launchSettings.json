@@ -4,12 +4,12 @@
       "commandName": "DockerCompose",
       "commandVersion": "1.0",
       "composeLaunchAction": "LaunchBrowser",
-      "composeLaunchServiceName": "gateway",
+      "composeLaunchServiceName": "",
       "composeLaunchUrl": "{Scheme}://localhost:{ServicePort}/swagger",
       "serviceActions": {
         "orderservice": "StartDebugging",
-        "catalogservice": "StartDebugging",
-        "gateway": "StartDebugging"
+        "catalogservice": "StartDebugging"
+        //"gateway": "StartDebugging"
       }
     }
   }

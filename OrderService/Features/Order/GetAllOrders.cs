@@ -15,7 +15,7 @@ public static class GetAllOrders
         string CustomerAddress,
         string CustomerCity,
         IEnumerable<Line> Lines);
-    public record Line(int SeqNo, int ProductId, decimal Price);
+    public record Line(int SeqNo, Guid ItemId, decimal Price);
 
     internal class Handler(OrderDbContext _dbContext) : IRequestHandler<Command, IEnumerable<OrderResponse>>
     {
@@ -31,7 +31,7 @@ public static class GetAllOrders
                                 o.CustomerAddress,
                                 o.CustomerCity,
                                 o.OrderLines.Select(l =>
-                                    new Line(l.SeqNo, l.ProductId, l.Price))
+                                    new Line(l.SeqNo, l.ItemId, l.Price))
                                 )
                             );
 

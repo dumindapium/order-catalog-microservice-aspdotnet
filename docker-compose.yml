@@ -21,13 +21,13 @@ services:
     networks:
         - proxybackend
 
-  gateway:
-    image: ${DOCKER_REGISTRY-}gateway:latest
-    build:
-      context: .
-      dockerfile: Gateway/Dockerfile
-    networks:
-        - proxybackend
+  # gateway:
+  #   image: ${DOCKER_REGISTRY-}gateway:latest
+  #   build:
+  #     context: .
+  #     dockerfile: Gateway/Dockerfile
+  #   networks:
+  #       - proxybackend
 
 
 networks:
